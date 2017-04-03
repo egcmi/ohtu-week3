@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ohtu.RunCukesTest" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="EMANUELA-LENOVO" time="0.0">
+  <properties/>
+  <system-out><![CDATA[Feature: User can log in with valid username/password-combination
+[komento (new tai login):, username:, password:, wrong username or password, komento (new tai login):]
+[komento (new tai login):, username:, password:, wrong username or password, komento (new tai login):]
+
+  Scenario: nonexistent user can not login to                  ?[90m# ohtu/login.feature:13?[0m
+    ?[32mGiven ?[0m?[32mcommand login is selected?[0m                            ?[90m# Stepdefs.command_login_selected()?[0m
+    ?[32mWhen ?[0m?[32musername "?[0m?[32m?[1makkep?[0m?[32m" and password "?[0m?[32m?[1makkep123?[0m?[32m" are entered?[0m  ?[90m# Stepdefs.username_and_password_are_entered(String,String)?[0m
+    ?[32mThen ?[0m?[32msystem will respond with "?[0m?[32m?[1mwrong username or password?[0m?[32m"?[0m ?[90m# Stepdefs.system_will_respond_with(String)?[0m
+Feature: A new user account can be created if a proper unused username and password are given
+[komento (new tai login):, username:, password:, new user not registered, komento (new tai login):]
+[komento (new tai login):, username:, password:, new user not registered, komento (new tai login):]
+[komento (new tai login):, username:, password:, new user not registered, komento (new tai login):]
+[komento (new tai login):, username:, password:, new user not registered, komento (new tai login):]
+[komento (new tai login):, username:, password:, logged in, komento (new tai login):]
+[komento (new tai login):, username:, password:, wrong username or password, komento (new tai login):]
+
+  Scenario: can not login with account that is not successfully created ?[90m# ohtu/new_user.feature:34?[0m
+    ?[32mGiven ?[0m?[32muser "?[0m?[32m?[1maa?[0m?[32m" with password "?[0m?[32m?[1maa?[0m?[32m" is created?[0m                       ?[90m# Stepdefs.user_with_password_is_created(String,String)?[0m
+    ?[32mAnd ?[0m?[32mcommand login is selected?[0m                                       ?[90m# Stepdefs.command_login_selected()?[0m
+    ?[32mWhen ?[0m?[32musername "?[0m?[32m?[1maa?[0m?[32m" and password "?[0m?[32m?[1maa?[0m?[32m" are entered?[0m                    ?[90m# Stepdefs.username_and_password_are_entered(String,String)?[0m
+    ?[32mThen ?[0m?[32msystem will respond with "?[0m?[32m?[1mwrong username or password?[0m?[32m"?[0m          ?[90m# Stepdefs.system_will_respond_with(String)?[0m
+
+?[31mFailed scenarios:?[0m
+?[31mohtu/login.feature:3 ?[0m# Scenario: user can login with correct password
+?[31mohtu/new_user.feature:3 ?[0m# Scenario: creation successful with correct username and password
+
+10 Scenarios (?[31m2 failed?[0m, ?[32m8 passed?[0m)
+32 Steps (?[31m2 failed?[0m, ?[32m30 passed?[0m)
+0m0.321s
+
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at ohtu.Stepdefs.system_will_respond_with(Stepdefs.java:38)
+	at ✽.Then system will respond with "logged in"(ohtu/login.feature:6)
+
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at ohtu.Stepdefs.system_will_respond_with(Stepdefs.java:38)
+	at ✽.Then system will respond with "new user registered"(ohtu/new_user.feature:6)
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

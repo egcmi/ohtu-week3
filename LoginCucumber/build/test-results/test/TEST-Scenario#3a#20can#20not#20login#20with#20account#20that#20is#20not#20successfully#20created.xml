@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Scenario: can not login with account that is not successfully created" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-04-03T12:49:13" hostname="EMANUELA-LENOVO" time="0.008">
+  <properties/>
+  <testcase name="Given user &quot;aa&quot; with password &quot;aa&quot; is created" classname="Scenario: can not login with account that is not successfully created" time="0.0"/>
+  <testcase name="And command login is selected" classname="Scenario: can not login with account that is not successfully created" time="0.0"/>
+  <testcase name="When username &quot;aa&quot; and password &quot;aa&quot; are entered" classname="Scenario: can not login with account that is not successfully created" time="0.0"/>
+  <testcase name="Then system will respond with &quot;wrong username or password&quot;" classname="Scenario: can not login with account that is not successfully created" time="0.0"/>
+  <testcase name="classMethod" classname="Scenario: can not login with account that is not successfully created" time="0.012"/>
+  <system-out><![CDATA[
+  Scenario: can login with successfully generated account     ?[90m# ohtu/new_user.feature:28?[0m
+    ?[32mGiven ?[0m?[32muser "?[0m?[32m?[1meero?[0m?[32m" with password "?[0m?[32m?[1msalainen1?[0m?[32m" is created?[0m    ?[90m# Stepdefs.user_with_password_is_created(String,String)?[0m
+    ?[32mAnd ?[0m?[32mcommand login is selected?[0m                             ?[90m# Stepdefs.command_login_selected()?[0m
+    ?[32mWhen ?[0m?[32musername "?[0m?[32m?[1meero?[0m?[32m" and password "?[0m?[32m?[1msalainen1?[0m?[32m" are entered?[0m ?[90m# Stepdefs.username_and_password_are_entered(String,String)?[0m
+    ?[32mThen ?[0m?[32msystem will respond with "?[0m?[32m?[1mlogged in?[0m?[32m"?[0m                 ?[90m# Stepdefs.system_will_respond_with(String)?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
